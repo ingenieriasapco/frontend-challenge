@@ -24,7 +24,8 @@ La aplicación debe permitir al usuario ver el detalle de la ruta, lo cual oblig
 Aquí están las directrices para este ejercicio:
 
 * Seguir la guía de estilos de [John Papa](https://github.com/johnpapa/angular-styleguide/tree/master/a1)
-* Debes hacer un fork de este repositorio a tu cuenta de [GitHub](https://github.com/).
+* Debes hacer un [fork de este repositorio](https://github.com/ingenieriasapco/frontend-challenge) a tu cuenta de [GitHub](https://github.com/).
 * Solo se acepta el codigo del challenge como un Pull Request a nuestro repositorio.
+* Cualquier duda o comentario que tenga sobre el challenge, solo sera valido como un [nuevo issue](https://github.com/ingenieriasapco/frontend-challenge/issues)
 * Por favor, no incluyen la carpeta en node_modules ni bower_components en su repositorio.
 * Aunque menos necesario sugerimos emplear Angular Material.
