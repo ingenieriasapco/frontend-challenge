@@ -1,0 +1,5 @@
+#Ignorar la carpeta node_modules
+node_modules/
+
+#y todos los archivos log
+"*.log"
