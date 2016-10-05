@@ -1,0 +1,10 @@
+<section layout="column" layout-align="center center" ng-controller="userEmailController">
+  <h1>Log In for continue</h1>
+  <md-input-container>
+    <label>Github Email</label>
+    <input ng-model="email">
+  </md-input-container>
+  <md-button class="md-primary" ng-show="email.length > 0" ng-model="button" ng-href="https://github.com/login/oauth/authorize?scope={{email}}&client_id=1d4e5fbf4cb2af9dc3d0">
+    Login with github as {{email}}
+  </md-button>
+</section>
