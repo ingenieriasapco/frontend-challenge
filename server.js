@@ -20,6 +20,10 @@ app.get('/', (request, response) => {
   response.sendFile('./app/index.html');
 });
 
-http.listen(3000, () => {
-  console.log("listenning to port 3000");
+app.get('/home', (request, response) => {
+
+});
+
+http.listen(process.env.PORT || 3000, () => {
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
