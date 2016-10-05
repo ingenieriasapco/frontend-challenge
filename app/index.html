@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="logPage">
 <head>
   <meta charset="UTF-8">
   <title>Log In</title>
+  <link rel="stylesheet" href="/angular-material/angular-material.min.css">
 </head>
 <body>
+<div ng-include="'logButton/logButton.html'"></div>
+<!-- angular and angular modules -->
 <script src="/angular/angular.min.js"></script>
 <script src="/angular-route/angular-route.min.js"></script>
 <script src="/angular-aria/angular-aria.min.js"></script>
 <script src="/angular-animate/angular-animate.min.js"></script>
 <script src="/angular-material/angular-material.min.js"></script>
+
+<!-- angular modules and controllers  -->
+<script src="logButton/module.js"></script>
+<script src="logButton/userEmailController.js"></script>
 </body>
 </html>
