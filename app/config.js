@@ -11,7 +11,7 @@ function router ($routeProvider) {
   $routeProvider
   .when('/', sapcoImg)
   .when('/home',{
-    template: '<h1>HOME ROUTE</h1>'
+    template: '<h1>Hi! Welcome to our app!</h1>'
   })
   .when('/routes',{
     templateUrl: 'routes/routes.html',
