@@ -18,20 +18,17 @@ var routes =
       {
         name: 'Medellín',
         breakTime: '2hours',
-        latitude: 6.253041,
-        longitude: -75.564574
+        longitudeLatitude: [6.253041, -75.564574]
       },
       {
         name: 'Manizales',
         breakTime: '15mins',
-        latitude: 5.070275,
-        longitude: -75.513817
+        longitudeLatitude: [5.070275, -75.513817]
       },
       {
         name: 'Bogotá',
         breakTime: '2mins',
-        latitude: 4.710989,
-        longitude: -74.072092
+        longitudeLatitude: [4.710989, -74.072092]
       }
     ]
   },
@@ -44,20 +41,17 @@ var routes =
       {
         name: 'Medellín',
         breakTime: '10mins',
-        latitude: 6.253041,
-        longitude: -75.564574
+        longitudeLatitude: [6.253041, -75.564574]
       },
       {
         name: 'Copacabana',
         breakTime: '2mins',
-        latitude: 6.357621,
-        longitude: -75.505078
+        longitudeLatitude: [6.357621, -75.505078]
       },
       {
         name: 'Girardota',
         breakTime: '30mins',
-        latitude: 6.378322,
-        longitude: -75.449517
+        longitudeLatitude: [6.378322, -75.449517]
       }
     ]
   },
@@ -70,32 +64,27 @@ var routes =
       {
         name: 'Medellín',
         breakTime: '1hour',
-        latitude: 6.253041,
-        longitude: -75.564574
+        longitudeLatitude: [6.253041, -75.564574]
       },
       {
         name: 'Barbosa',
         breakTime: '10mins',
-        latitude: 6.430272,
-        longitude: -75.333939
+        longitudeLatitude: [6.430272, -75.333939]
       },
       {
         name: 'Yolombó',
         breakTime: '5mins',
-        latitude: 6.590593,
-        longitude: -75.020142
+        longitudeLatitude: [6.590593, -75.020142]
       },
       {
         name: 'Yalí',
         breakTime: '0mins',
-        latitude: 6.669029,
-        longitude: -74.842300
+        longitudeLatitude: [6.669029, -74.842300]
       },
       {
         name: 'Vegachí',
         breakTime: '1hour',
-        latitude: 6.770637,
-        longitude: -74.801102
+        longitudeLatitude: [6.770637, -74.801102]
       }
     ]
   },
@@ -108,26 +97,22 @@ var routes =
       {
         name: 'Vegachí',
         breakTime: '10mins',
-        latitude: 6.770637,
-        longitude: -74.801102
+        longitudeLatitude: [6.770637, -74.801102]
       },
       {
         name: 'Remedios',
         breakTime: '45mins',
-        latitude: 7.026946,
-        longitude: -74.699478
+        longitudeLatitude: [7.026946, -74.699478]
       },
       {
         name: 'El Porvenir',
         breakTime: '5mins',
-        latitude: 7.036487,
-        longitude: -74.657593
+        longitudeLatitude: [7.036487, -74.657593]
       },
       {
         name: 'Segovia',
         breakTime: '30mins',
-        latitude: 7.078736,
-        longitude: -74.702225
+        longitudeLatitude: [7.078736, -74.702225] 
       }
     ]
   }
