@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <title>Home</title>
   <link rel="stylesheet" href="/angular-material/angular-material.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <section ng-include="'navbar/navbar.html'"></section>
+  <section id="view" layout="row" layout-align="center" ng-view></section>
 <!-- angular and angular modules -->
 <script src="/angular/angular.min.js"></script>
 <script src="/angular-route/angular-route.min.js"></script>
