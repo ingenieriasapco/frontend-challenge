@@ -1,0 +1,28 @@
+<div class="info-ruta">
+  <h2 class="md-display-1">{{drc.ruta.nombre}}</h2>
+  <ul>
+    <li><b>Nombre de la flota:</b> {{drc.ruta.nombre_flota.toUpperCase()}}</li>
+    <li><b>Nombre del conductor:</b> {{drc.ruta.nombre_conductor}}</li>
+    <li><b>Placa del vehículo:</b> {{drc.ruta.placa_vehiculo}}</li>
+    <li>
+      <b>Puntos:</b> ({{drc.ruta.puntos.length}})
+      <ul>
+        <li ng-repeat="p in drc.ruta.puntos">{{p.nombre}}. (Tiempo máximo de espera: {{p.tiempo_max_espera}} minutos.)</li>
+      </ul>
+    </li>
+
+  </ul>
+</div>
+
+<ui-gmap-google-map  center='drc.confMapa.center' zoom='drc.confMapa.zoom'>
+    <ui-gmap-polyline
+    	path="drc.path"
+    	stroke="drc.confMapaPolyline.stroke"
+    	icons="drc.confMapaPolyline.icons"
+    	draggable="drc.confMapaPolyline.draggable"
+    	editable="drc.confMapaPolyline.editable"
+    	visible='true'
+      geodesic='true'
+      fit="false" >
+	</ui-gmap-polyline>
+</ui-gmap-google-map>

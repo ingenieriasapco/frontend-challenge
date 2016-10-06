@@ -1,0 +1,11 @@
+<h3 class="md-headline">Bienvenido al SAPCO Challenge</h3>
+<div md-colors="{background: 'default-teal-500-1'}" class="info-github" ng-controller="AutenticacionController as vm">
+
+  <div ng-show="!vm.estaConectado">
+    <h4 class="md-subhead">¡Apúntate!</h4>
+    <p> Te puedes registrar con tu cuenta GitHub para recibir las últimas actualizaciones...</p>
+    <md-button  ng-click="vm.conectar()" class="md-raised">Conectar con GitHub</md-button>
+  </div>
+
+  <p ng-show="vm.estaConectado"> {{vm.alias}} ya te has registrado para recibir actualizaciones.</p>
+</div>
