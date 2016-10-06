@@ -1,0 +1,8 @@
+<section layout="column">
+<h2>Avaliable routes</h2>
+  <md-list>
+  <md-list-item ng-repeat="route in vm.database track by $index">
+    <md-button ng-href="#routes/{{$index}}">{{route.name}}</md-button>
+  </md-list-item>
+  </md-list>
+</section>

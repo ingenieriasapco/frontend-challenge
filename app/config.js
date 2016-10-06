@@ -14,7 +14,9 @@ function router ($routeProvider) {
     template: '<h1>HOME ROUTE</h1>'
   })
   .when('/routes',{
-    template: '<h1>ROUTES ROUTE</h1>'
+    templateUrl: 'routes/routes.html',
+    controller: 'routesController',
+    controllerAs: 'vm'
   })
   .otherwise(sapcoImg);
 }
