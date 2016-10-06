@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="logPage">
+<html lang="en" ng-app="homePage">
 <head>
   <meta charset="UTF-8">
-  <title>Log In</title>
+  <title>Home</title>
   <link rel="stylesheet" href="/angular-material/angular-material.min.css">
 </head>
 <body>
+  <section ng-include="'navbar/navbar.html'"></section>
 <!-- angular and angular modules -->
 <script src="/angular/angular.min.js"></script>
 <script src="/angular-route/angular-route.min.js"></script>
@@ -14,6 +15,8 @@
 <script src="/angular-material/angular-material.min.js"></script>
 
 <!-- angular modules and controllers  -->
-
+<script src="../module.js"></script>
+<script src="../config.js"></script>
+<script src="database.json"></script>
 </body>
 </html>
