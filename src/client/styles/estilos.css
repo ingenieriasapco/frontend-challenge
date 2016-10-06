@@ -1,0 +1,24 @@
+md-toolbar {
+  min-height: 30px;
+  padding: 0 0 10px 25px;
+}
+#contenedor {
+  width: 100%;
+  height: 100%;
+}
+#contenedor md-sidenav,
+#contenedor md-content {
+  height: 100%;
+}
+#contenedor md-content {
+  height: 100%;
+  padding: 20px;
+}
+#contenedor md-content .info-github,
+#contenedor md-content .info-ruta {
+  padding: 20px;
+}
+.angular-google-map-container {
+  height: 450px;
+  width: 100%;
+}

@@ -1,0 +1,220 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'oauthbower',
+1 verbose cli   'install',
+1 verbose cli   'oauthio-web' ]
+2 info using npm@3.10.3
+3 info using node@v6.5.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData oauthbower
+8 silly fetchPackageMetaData install
+9 silly fetchPackageMetaData oauthio-web
+10 silly fetchNamedPackageData oauthbower
+11 silly mapToRegistry name oauthbower
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry data Result {
+14 silly mapToRegistry   raw: 'oauthbower',
+14 silly mapToRegistry   scope: null,
+14 silly mapToRegistry   escapedName: 'oauthbower',
+14 silly mapToRegistry   name: 'oauthbower',
+14 silly mapToRegistry   rawSpec: '',
+14 silly mapToRegistry   spec: 'latest',
+14 silly mapToRegistry   type: 'tag' }
+15 silly mapToRegistry uri https://registry.npmjs.org/oauthbower
+16 silly fetchNamedPackageData install
+17 silly mapToRegistry name install
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry https://registry.npmjs.org/
+20 silly mapToRegistry data Result {
+20 silly mapToRegistry   raw: 'install',
+20 silly mapToRegistry   scope: null,
+20 silly mapToRegistry   escapedName: 'install',
+20 silly mapToRegistry   name: 'install',
+20 silly mapToRegistry   rawSpec: '',
+20 silly mapToRegistry   spec: 'latest',
+20 silly mapToRegistry   type: 'tag' }
+21 silly mapToRegistry uri https://registry.npmjs.org/install
+22 silly fetchNamedPackageData oauthio-web
+23 silly mapToRegistry name oauthio-web
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'oauthio-web',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'oauthio-web',
+26 silly mapToRegistry   name: 'oauthio-web',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/oauthio-web
+28 verbose request uri https://registry.npmjs.org/oauthbower
+29 verbose request no auth needed
+30 info attempt registry request try #1 at 21:16:04
+31 verbose request id f444e18caa1bc591
+32 http request GET https://registry.npmjs.org/oauthbower
+33 verbose request uri https://registry.npmjs.org/install
+34 verbose request no auth needed
+35 info attempt registry request try #1 at 21:16:04
+36 http request GET https://registry.npmjs.org/install
+37 verbose request uri https://registry.npmjs.org/oauthio-web
+38 verbose request no auth needed
+39 info attempt registry request try #1 at 21:16:04
+40 http request GET https://registry.npmjs.org/oauthio-web
+41 http 404 https://registry.npmjs.org/oauthbower
+42 verbose headers { 'content-type': 'application/json',
+42 verbose headers   'cache-control': 'max-age=0',
+42 verbose headers   'content-length': '2',
+42 verbose headers   'accept-ranges': 'bytes',
+42 verbose headers   date: 'Thu, 06 Oct 2016 02:16:07 GMT',
+42 verbose headers   via: '1.1 varnish',
+42 verbose headers   age: '0',
+42 verbose headers   connection: 'keep-alive',
+42 verbose headers   'x-served-by': 'cache-gru7124-GRU',
+42 verbose headers   'x-cache': 'MISS',
+42 verbose headers   'x-cache-hits': '0',
+42 verbose headers   'x-timer': 'S1475720167.677088,VS0,VE199',
+42 verbose headers   vary: 'Accept-Encoding' }
+43 silly get cb [ 404,
+43 silly get   { 'content-type': 'application/json',
+43 silly get     'cache-control': 'max-age=0',
+43 silly get     'content-length': '2',
+43 silly get     'accept-ranges': 'bytes',
+43 silly get     date: 'Thu, 06 Oct 2016 02:16:07 GMT',
+43 silly get     via: '1.1 varnish',
+43 silly get     age: '0',
+43 silly get     connection: 'keep-alive',
+43 silly get     'x-served-by': 'cache-gru7124-GRU',
+43 silly get     'x-cache': 'MISS',
+43 silly get     'x-cache-hits': '0',
+43 silly get     'x-timer': 'S1475720167.677088,VS0,VE199',
+43 silly get     vary: 'Accept-Encoding' } ]
+44 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/oauthbower
+44 silly fetchPackageMetaData     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+44 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:242:14)
+44 silly fetchPackageMetaData     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+44 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:200:22)
+44 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+44 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+44 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1067:10)
+44 silly fetchPackageMetaData     at emitOne (events.js:101:20)
+44 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+44 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:988:12)
+44 silly fetchPackageMetaData  error for oauthbower { Error: Registry returned 404 for GET on https://registry.npmjs.org/oauthbower
+44 silly fetchPackageMetaData     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+44 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:242:14)
+44 silly fetchPackageMetaData     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+44 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:200:22)
+44 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+44 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+44 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1067:10)
+44 silly fetchPackageMetaData     at emitOne (events.js:101:20)
+44 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+44 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:988:12) pkgid: 'oauthbower', statusCode: 404, code: 'E404' }
+45 http 200 https://registry.npmjs.org/oauthio-web
+46 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+46 verbose headers   etag: '"BNUTLVF3VWKELIRJ4UEZ8HOOK"',
+46 verbose headers   'content-type': 'application/json',
+46 verbose headers   'content-encoding': 'gzip',
+46 verbose headers   'cache-control': 'max-age=300',
+46 verbose headers   'content-length': '4557',
+46 verbose headers   'accept-ranges': 'bytes',
+46 verbose headers   date: 'Thu, 06 Oct 2016 02:16:07 GMT',
+46 verbose headers   via: '1.1 varnish',
+46 verbose headers   age: '0',
+46 verbose headers   connection: 'keep-alive',
+46 verbose headers   'x-served-by': 'cache-gru7126-GRU',
+46 verbose headers   'x-cache': 'MISS',
+46 verbose headers   'x-cache-hits': '0',
+46 verbose headers   'x-timer': 'S1475720167.669934,VS0,VE208',
+46 verbose headers   vary: 'Accept-Encoding' }
+47 silly get cb [ 200,
+47 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+47 silly get     etag: '"BNUTLVF3VWKELIRJ4UEZ8HOOK"',
+47 silly get     'content-type': 'application/json',
+47 silly get     'content-encoding': 'gzip',
+47 silly get     'cache-control': 'max-age=300',
+47 silly get     'content-length': '4557',
+47 silly get     'accept-ranges': 'bytes',
+47 silly get     date: 'Thu, 06 Oct 2016 02:16:07 GMT',
+47 silly get     via: '1.1 varnish',
+47 silly get     age: '0',
+47 silly get     connection: 'keep-alive',
+47 silly get     'x-served-by': 'cache-gru7126-GRU',
+47 silly get     'x-cache': 'MISS',
+47 silly get     'x-cache-hits': '0',
+47 silly get     'x-timer': 'S1475720167.669934,VS0,VE208',
+47 silly get     vary: 'Accept-Encoding' } ]
+48 verbose get saving oauthio-web to C:\Users\Santiago\AppData\Roaming\npm-cache\registry.npmjs.org\oauthio-web\.cache.json
+49 verbose correctMkdir C:\Users\Santiago\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+50 http 200 https://registry.npmjs.org/install
+51 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+51 verbose headers   etag: '"E87BRBJ2V5AH8OYGJUM1D011K"',
+51 verbose headers   'content-type': 'application/json',
+51 verbose headers   'content-encoding': 'gzip',
+51 verbose headers   'cache-control': 'max-age=300',
+51 verbose headers   'content-length': '7498',
+51 verbose headers   'accept-ranges': 'bytes',
+51 verbose headers   date: 'Thu, 06 Oct 2016 02:16:07 GMT',
+51 verbose headers   via: '1.1 varnish',
+51 verbose headers   age: '0',
+51 verbose headers   connection: 'keep-alive',
+51 verbose headers   'x-served-by': 'cache-gru7123-GRU',
+51 verbose headers   'x-cache': 'HIT',
+51 verbose headers   'x-cache-hits': '1',
+51 verbose headers   'x-timer': 'S1475720167.673918,VS0,VE197',
+51 verbose headers   vary: 'Accept-Encoding' }
+52 silly get cb [ 200,
+52 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+52 silly get     etag: '"E87BRBJ2V5AH8OYGJUM1D011K"',
+52 silly get     'content-type': 'application/json',
+52 silly get     'content-encoding': 'gzip',
+52 silly get     'cache-control': 'max-age=300',
+52 silly get     'content-length': '7498',
+52 silly get     'accept-ranges': 'bytes',
+52 silly get     date: 'Thu, 06 Oct 2016 02:16:07 GMT',
+52 silly get     via: '1.1 varnish',
+52 silly get     age: '0',
+52 silly get     connection: 'keep-alive',
+52 silly get     'x-served-by': 'cache-gru7123-GRU',
+52 silly get     'x-cache': 'HIT',
+52 silly get     'x-cache-hits': '1',
+52 silly get     'x-timer': 'S1475720167.673918,VS0,VE197',
+52 silly get     vary: 'Accept-Encoding' } ]
+53 verbose get saving install to C:\Users\Santiago\AppData\Roaming\npm-cache\registry.npmjs.org\install\.cache.json
+54 verbose correctMkdir C:\Users\Santiago\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+55 silly rollbackFailedOptional Starting
+56 silly rollbackFailedOptional Finishing
+57 silly runTopLevelLifecycles Starting
+58 silly runTopLevelLifecycles Finishing
+59 silly install printInstalled
+60 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/oauthbower
+60 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+60 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:242:14)
+60 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+60 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:200:22)
+60 verbose stack     at emitTwo (events.js:106:13)
+60 verbose stack     at Request.emit (events.js:191:7)
+60 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1067:10)
+60 verbose stack     at emitOne (events.js:101:20)
+60 verbose stack     at Request.emit (events.js:188:7)
+60 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:988:12)
+61 verbose statusCode 404
+62 verbose pkgid oauthbower
+63 verbose cwd c:\xampp\htdocs\sapco-challenge-angular
+64 error Windows_NT 10.0.14393
+65 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "oauthbower" "install" "oauthio-web"
+66 error node v6.5.0
+67 error npm  v3.10.3
+68 error code E404
+69 error 404 Registry returned 404 for GET on https://registry.npmjs.org/oauthbower
+70 error 404
+71 error 404 'oauthbower' is not in the npm registry.
+72 error 404 You should bug the author to publish it (or use the name yourself!)
+73 error 404 Note that you can also install from a
+74 error 404 tarball, folder, http url, or git url.
+75 verbose exit [ 1, true ]
