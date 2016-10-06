@@ -3,3 +3,10 @@ angular
       'ngMaterial',
       'ngAnimate'
     ]);
+
+angular
+    .module('homePage',[
+      'ngMaterial',
+      'ngAnimate',
+      'ngRoute'
+    ]);
