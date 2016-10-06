@@ -18,5 +18,10 @@ function router ($routeProvider) {
     controller: 'routesController',
     controllerAs: 'vm'
   })
+  .when('/routes/:id',{
+    templateUrl: 'routes/routeMap.html',
+    controller: 'mapController',
+    controllerAs: 'routeMap'
+  })
   .otherwise(sapcoImg);
 }

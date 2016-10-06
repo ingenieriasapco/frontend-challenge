@@ -1,0 +1,38 @@
+<section layout="column">
+  <div>
+    <ng-map zoom="" center="{{path[1]}}" map-type-id="TERRAIN">
+      <shape name="polyline"
+        path="{{path}}"
+        geodesic="true"
+        stroke-color="#FF0000"
+        stroke-opacity="1.0"
+        stroke-weight="2">
+      </shape>
+    </ng-map>
+  </div>
+  <div>
+    <strong>Route: </strong>{{information.name}}
+    <md-divider></md-divider>
+    <strong>Agency: </strong>{{information.agency}}
+    <md-divider></md-divider>
+    <strong>Driver: </strong>{{information.driver}}
+    <md-divider></md-divider>
+    <strong>car ID: </strong>{{information.carId}}
+    <md-divider></md-divider>
+    <strong>Scales:</strong>
+    <md-list>
+      <md-item ng-repeat="scale in information.points track by $index">
+        <span class="scaledata">{{$index+1}}. {{scale.name}}</span><br>
+          <ul>
+            <li class="scaledata">
+              You will be there: {{scale.breakTime}}
+            </li>
+            <li class="scaledata">
+              Longitude and latitude are: {{scale.longitudeLatitude[0]}}, {{scale.longitudeLatitude[1]}}
+            </li>
+          </ul>
+      </md-item>
+    </md-list>
+  </div>
+    <md-button ng-href="#routes">Go Back</md-button>
+</section>

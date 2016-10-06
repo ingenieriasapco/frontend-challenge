@@ -8,5 +8,6 @@ angular
     .module('homePage',[
       'ngMaterial',
       'ngAnimate',
-      'ngRoute'
+      'ngRoute',
+      'ngMap'
     ]);
