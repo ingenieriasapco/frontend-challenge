@@ -17,8 +17,10 @@ angular.module('app.controllers', [])
 
     function init(){
       firebase.auth().onAuthStateChanged(function(user){
+        var URLdominio = window.location.host;
         if (user) {
           console.log("el usuario esta conectado.");
+          window.location.href = 'http://'+URLdominio+'/#/rutas';
         } else {
           console.log("el usuario esta desconectado.");
         }
@@ -57,14 +59,37 @@ angular.module('app.controllers', [])
         });
         firebase.auth().signInWithEmailAndPassword(emailUser, passUser);
       });
+    }
+  }])
+
+.controller('modulo-rutas', ['$scope', '$stateParams', '$http',function ($scope, $stateParams, $http){
+  $(document).ready(function(){
+    iniciarRutas();
+  })
+
+  function iniciarRutas(){
+      firebase.auth().onAuthStateChanged(function(user){
+        var URLdominio = window.location.host;
+        if (user) {
+          console.log("el usuario esta conectado.");
+        } else {
+          window.location.href = 'http://'+URLdominio+'/#/login';
+          console.log("el usuario esta desconectado.");
+        }
+      });
 
       $("#cerrar-sesion").on('click',function(){
-        firebase.auth().signOut().then(function() {
+        firebase.auth().signOut().then(function(user){
           Materialize.toast("usuario desconectado", 4000);
         }, function(error) {
           Materialize.toast("algo a salido mal. " +error , 4000);
         });
       })
-    }
-  }])
+
+      $http.get('../json/rutas.json')
+       .then(function(res){
+          $scope.rutasMed = res.data;                
+        });
+  }
+}])
 
