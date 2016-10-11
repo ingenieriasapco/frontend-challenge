@@ -65,13 +65,16 @@ angular.module('app.controllers', [])
 .controller('modulo-rutas', ['$scope', '$stateParams', '$http',function ($scope, $stateParams, $http){
   $(document).ready(function(){
     iniciarRutas();
+    $('.tooltipped').tooltip({delay: 50});
   })
 
   function iniciarRutas(){
       firebase.auth().onAuthStateChanged(function(user){
         var URLdominio = window.location.host;
         if (user) {
-          console.log("el usuario esta conectado.");
+          $("#usuario").html(user.displayName);
+          console.log("el usuario esta conectado. ");
+          console.log(user);
         } else {
           window.location.href = 'http://'+URLdominio+'/#/login';
           console.log("el usuario esta desconectado.");
@@ -88,7 +91,8 @@ angular.module('app.controllers', [])
 
       $http.get('../json/rutas.json')
        .then(function(res){
-          $scope.rutasMed = res.data;                
+          $scope.rutasMed = res.data;  
+          console.log($scope.rutasMed = res.data);              
         });
   }
 }])
