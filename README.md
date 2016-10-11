@@ -28,5 +28,6 @@ Aquí están las directrices para este ejercicio:
 * Crear un branch en tu repositorio con tu nombre
 * Solo se acepta el codigo del challenge como un Pull Request a nuestro repositorio desde tu branch nuevo al branch develop.
 * Cualquier duda o comentario que tenga sobre el challenge, solo sera valido como un [nuevo issue](https://github.com/ingenieriasapco/frontend-challenge/issues)
+* Generar carpeta de distribucion para llevar a producción, incluirla en el repositorio.
 * Por favor, no incluyen la carpeta en node_modules ni bower_components en su repositorio.
 * Aunque menos necesario sugerimos emplear Angular Material.
