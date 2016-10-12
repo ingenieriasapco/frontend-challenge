@@ -213,12 +213,13 @@ angular.module('app.controllers', [])
           position: myLatLng,
           title: 'aqui estoy!'
         });
-
+/*
         var gCoder = new google.maps.Geocoder();
         var objInformacion = {
           address: 'Bogotá, Colombia'
         }
         gCoder.geocode(objInformacion, fn_coder);
+        
         function fn_coder(datos){
           var coordenadas = datos[0].geometry.location;
           var config = {
@@ -228,11 +229,11 @@ angular.module('app.controllers', [])
           }
           var gMarkerDV = new google.maps.Marker(config);
         }
-
+*/
         var objConfigDR = {
           map: map 
         }
-        
+
         var objConfigDS = {
           origin: myLatLng,
           destination: destino,
@@ -243,12 +244,12 @@ angular.module('app.controllers', [])
         var dr = new google.maps.DirectionsRenderer(objConfigDR);
 
         ds.route(objConfigDS, fnRutear);
-
+        
         function fnRutear(resultados, status){
           //mostrar la ruta entre a y b
           if(status == 'OK'){
             dr.setDirections(resultados);
-
+            console.log(resultados);
           }else{
             console.log("error " + status);
           }
