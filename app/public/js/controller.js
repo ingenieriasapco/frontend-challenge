@@ -96,4 +96,15 @@ angular.module('app.controllers', [])
         });
   }
 }])
+.controller('modulo-mapas', ['$scope', '$stateParams',function ($scope, $stateParams){
+      firebase.auth().onAuthStateChanged(function(user){
+        var URLdominio = window.location.host;
+        if (user){
+          console.log("el usuario esta conectado. ");
+        } else {
+          window.location.href = 'http://'+URLdominio+'/#/login';
+          console.log("el usuario esta desconectado.");
+        }
+      });
+}])
 

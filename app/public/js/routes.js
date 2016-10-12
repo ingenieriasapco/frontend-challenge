@@ -12,4 +12,9 @@ angular.module('app.routes', [])
     templateUrl: "vistas/modulo-rutas.html",
     controller: 'modulo-rutas'
   })
+  .state('mapa',{
+    url: "/mapa",
+    templateUrl: "vistas/map.html",
+    controller: 'modulo-mapas'
+  })
 });
