@@ -191,6 +191,7 @@ angular.module('app.controllers', [])
   }
   function googleMap(){
     if (navigator.geolocation) {
+
       console.log("el navegador es geolocalizable");
       navigator.geolocation.getCurrentPosition(function (position) {
         var miPos = position;
@@ -201,6 +202,7 @@ angular.module('app.controllers', [])
 
         var myLatLng = { lat: lati, lng: long };
         var destino = { lat:4.6482837, lng: -74.2478954 }
+
         var map = new google.maps.Map(document.getElementById('map'), {
           center: myLatLng,
           scrollwheel: false,
@@ -212,12 +214,27 @@ angular.module('app.controllers', [])
           title: 'aqui estoy!'
         });
 
+        var gCoder = new google.maps.Geocoder();
+        var objInformacion = {
+          address: 'Bogotá, Colombia'
+        }
+        gCoder.geocode(objInformacion, fn_coder);
+        function fn_coder(datos){
+          var coordenadas = datos[0].geometry.location;
+          var config = {
+            map: map,
+            position: coordenadas,
+            tittle:'destino!' 
+          }
+          var gMarkerDV = new google.maps.Marker(config);
+        }
+
         var objConfigDR = {
-          mapa: map 
+          map: map 
         }
         
         var objConfigDS = {
-          origin:myLatLng,
+          origin: myLatLng,
           destination: destino,
           travelMode: google.maps.TravelMode.DRIVING
         }
@@ -231,7 +248,7 @@ angular.module('app.controllers', [])
           //mostrar la ruta entre a y b
           if(status == 'OK'){
             dr.setDirections(resultados);
-            console.log("correcto!");
+
           }else{
             console.log("error " + status);
           }
