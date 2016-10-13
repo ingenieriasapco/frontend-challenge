@@ -16,22 +16,38 @@
         </li>
 
         <li class="container">
-            <form>
-                <div class="input-field col s12">
-                    <select name="nombre-lugar" id="select" class="browser-default">
-                        <option value="" disabled selected>elije una opcion</option>
+            <form id="select" id="" action="">
+                <p>
+                    <input class="with-gap" name="group1" type="radio" id="test1" value="Bello" />
+                    <label for="test1">Bello</label>
+                    <select name="nombre-bello" id="bello" class="bello browser-default">
+                      <option value="" disabled selected>elije una opcion</option>
                     </select>
-                    <input id="datos-sector" type="text" name="result-lugar" value="" disabled="disabled" placeholder="ruta">
-
-                    <br>
-
-                    <select name="nombre-ruta" id="select-ruta" class="browser-default">
-                        <option value="" disabled selected>elije una ruta</option>
+                </p>
+                <p>
+                    <input class="with-gap" name="group1" type="radio" id="test2" value="Medellin" />
+                    <label for="test2">Medellin</label>
+                    <select name="nombre-medellin" id="medellin" class="browser-default">
+                      <option value="" disabled selected>elije una opcion</option>
                     </select>
-                    <input type="text" name="result" value="" disabled="disabled" placeholder="ruta">
-                </div>
-                  <button class="btn waves-effect waves-light" type="" name="">buscar</button>
+                </p>
+                <p>
+                    <input class="with-gap" name="group1" type="radio" id="test3" value="Robledo" />
+                    <label for="test3">Robledo</label>
+                    <select name="nombre-robledo" id="robledo" class="browser-default">
+                      <option value="" disabled selected>elije una opcion</option>
+                    </select>
+                </p>
             </form>
+            <hr>
+                <button id="enviar-datos" class="btn waves-effect waves-light" type="" name="">buscar</button>
+                <div class="dividir"></div>
+                <input id="datos-sector" type="text" name="result" value="" disabled="disabled" placeholder="sector">
+                <input id="datos-ruta" type="text" name="result-ruta" value="" disabled="disabled" placeholder="ruta">
+                <ul style="display: inline-flex;">
+                    <li><input id="datos-lat" type="text" name="result-lon" value="" disabled="disabled" placeholder="lat"></li>
+                    <li><input id="datos-lon" type="text" name="result-lon" value="" disabled="disabled" placeholder="lon"></li>
+                </ul>
         </li>
         <!--<li>
             <div class="divider"></div>
