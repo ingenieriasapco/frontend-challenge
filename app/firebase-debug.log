@@ -3,21 +3,7 @@
 [debug] CLI Version:  3.0.8
 [debug] Platform:     win32
 [debug] Node Version: v4.6.0
-[debug] Time:         Tue Oct 11 2016 18:37:05 GMT-0500 (Hora est. Pacífico, Sudamérica)
-[debug] ----------------------------------------------------------------------
-[debug] 
-[info] Starting Firebase development server...
-[info] 
-[info] Project Directory: C:\Users\daniel\Documents\test-git\frontend-challenge\app
-[info] Public Directory: public
-[info] 
-[info] Server listening at: http://localhost:5000
-[debug] ----------------------------------------------------------------------
-[debug] Command:      C:\Program Files\nodejs\node.exe C:\Users\daniel\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] CLI Version:  3.0.8
-[debug] Platform:     win32
-[debug] Node Version: v4.6.0
-[debug] Time:         Tue Oct 11 2016 18:38:19 GMT-0500 (Hora est. Pacífico, Sudamérica)
+[debug] Time:         Wed Oct 12 2016 09:01:12 GMT-0500 (Hora est. Pacífico, Sudamérica)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [info] Starting Firebase development server...

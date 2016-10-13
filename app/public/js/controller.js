@@ -67,6 +67,9 @@ angular.module('app.controllers', [])
   $(document).ready(function(){
     iniciarRutas();
     $('.tooltipped').tooltip({delay: 50});
+    $('.collapsible').collapsible({
+      accordion : false
+    });
   })
 
   function iniciarRutas(){
@@ -96,67 +99,73 @@ angular.module('app.controllers', [])
           var json = $scope.rutasMed = res.data; 
           //console.log($scope.rutasMed = res.data);             
           datosRutas.ref('datosRutas').update({
-            'sector1':{
-              'nombreConductor': res.data[0].nombreConductor,'nombreSector': res.data[0].nombreRuta,'nombreFlota': res.data[0].nombreFlota,
-              'ruta1': {
-                'nombreRuta': res.data[0].nombrePunto.ruta1.nombre,
-                'tiempoRuta': res.data[0].nombrePunto.ruta1.tiempo,
-                'longitud': res.data[0].nombrePunto.ruta1.longitud,
-                'latitud': res.data[0].nombrePunto.ruta1.latitud
-              },
-              'ruta2':{
-                'nombreRuta': res.data[0].nombrePunto.ruta2.nombre,
-                'tiempoRuta': res.data[0].nombrePunto.ruta2.tiempo,
-                'longitud': res.data[0].nombrePunto.ruta2.longitud,
-                'latitud': res.data[0].nombrePunto.ruta2.latitud
-              },
-              'ruta3':{
-                'nombreRuta': res.data[0].nombrePunto.ruta3.nombre,
-                'tiempoRuta': res.data[0].nombrePunto.ruta3.tiempo,
-                'longitud': res.data[0].nombrePunto.ruta3.longitud,
-                'latitud': res.data[0].nombrePunto.ruta3.latitud
+            'sectorBello':{
+              'numSector': res.data[0].numSector,'nombreConductor': res.data[0].nombreConductor,'nombreSector': res.data[0].nombreRuta,'nombreFlota': res.data[0].nombreFlota,
+              'ruta': {
+                'datosRutaNiquia': {
+                  'nombreRuta': res.data[0].nombrePunto.ruta1.nombre,
+                  'tiempoRuta': {'tiempo':res.data[0].nombrePunto.ruta1.tiempo},
+                  'longitud': {'lon':res.data[0].nombrePunto.ruta1.longitud},
+                  'latitud': {'lat':res.data[0].nombrePunto.ruta1.latitud}
+                },
+                'datosRutaParque_de_bello': {
+                  'nombreRuta': res.data[0].nombrePunto.ruta2.nombre,
+                  'tiempoRuta': {'tiempo':res.data[0].nombrePunto.ruta2.tiempo},
+                  'longitud': {'lon':res.data[0].nombrePunto.ruta2.longitud},
+                  'latitud': {'lat':res.data[0].nombrePunto.ruta2.latitud}
+                },
+                'datosRutaEstacion_del_metro': {
+                  'nombreRuta': res.data[0].nombrePunto.ruta3.nombre,
+                  'tiempoRuta': {'tiempo':res.data[0].nombrePunto.ruta3.tiempo},
+                  'longitud': {'lon':res.data[0].nombrePunto.ruta3.longitud},
+                  'latitud': {'lat':res.data[0].nombrePunto.ruta3.latitud}
+                }
               }
             },
-            'sector2':{
-              'nombreConductor': res.data[1].nombreConductor,'nombreSector': res.data[1].nombreRuta,'nombreFlota': res.data[1].nombreFlota,
-              'ruta1': {
-                'nombreRuta': res.data[1].nombrePunto.ruta1.nombre,
-                'tiempoRuta': res.data[1].nombrePunto.ruta1.tiempo,
-                'longitud': res.data[1].nombrePunto.ruta1.longitud,
-                'latitud': res.data[1].nombrePunto.ruta1.latitud
-              },
-              'ruta2':{
-                'nombreRuta': res.data[1].nombrePunto.ruta2.nombre,
-                'tiempoRuta': res.data[1].nombrePunto.ruta2.tiempo,
-                'longitud': res.data[1].nombrePunto.ruta2.longitud,
-                'latitud': res.data[1].nombrePunto.ruta2.latitud
-              },
-              'ruta3':{
-                'nombreRuta': res.data[1].nombrePunto.ruta3.nombre,
-                'tiempoRuta': res.data[1].nombrePunto.ruta3.tiempo,
-                'longitud': res.data[1].nombrePunto.ruta3.longitud,
-                'latitud': res.data[1].nombrePunto.ruta3.latitud
+            'sectorMedellin':{
+              'numSector': res.data[1].numSector,'nombreConductor': res.data[1].nombreConductor,'nombreSector': res.data[1].nombreRuta,'nombreFlota': res.data[1].nombreFlota,
+              'ruta': {
+                'datosRutaPrado_centro': {
+                  'nombreRuta': res.data[1].nombrePunto.ruta1.nombre,
+                  'tiempoRuta': {'tiempo':res.data[1].nombrePunto.ruta1.tiempo},
+                  'longitud': {'lon':res.data[1].nombrePunto.ruta1.longitud},
+                  'latitud': {'lat':res.data[1].nombrePunto.ruta1.latitud}
+                },
+                'datosRutaEstadio': {
+                  'nombreRuta': res.data[1].nombrePunto.ruta2.nombre,
+                  'tiempoRuta': {'tiempo':res.data[1].nombrePunto.ruta2.tiempo},
+                  'longitud': {'lon':res.data[1].nombrePunto.ruta2.longitud},
+                  'latitud': {'lat':res.data[1].nombrePunto.ruta2.latitud}
+                },
+                'datosRutaLa_floresta': {
+                  'nombreRuta': res.data[1].nombrePunto.ruta3.nombre,
+                  'tiempoRuta': {'tiempo':res.data[1].nombrePunto.ruta3.tiempo},
+                  'longitud': {'lon':res.data[1].nombrePunto.ruta3.longitud},
+                  'latitud': {'lat':res.data[1].nombrePunto.ruta3.latitud}
+                }
               }
             },
-            'sector3':{
-              'nombreConductor': res.data[2].nombreConductor,'nombreSector': res.data[2].nombreRuta,'nombreFlota': res.data[2].nombreFlota,
-              'ruta1': {
-                'nombreRuta': res.data[2].nombrePunto.ruta1.nombre,
-                'tiempoRuta': res.data[2].nombrePunto.ruta1.tiempo,
-                'longitud': res.data[2].nombrePunto.ruta1.longitud,
-                'latitud': res.data[2].nombrePunto.ruta1.latitud
-              },
-              'ruta2':{
-                'nombreRuta': res.data[2].nombrePunto.ruta2.nombre,
-                'tiempoRuta': res.data[2].nombrePunto.ruta2.tiempo,
-                'longitud': res.data[2].nombrePunto.ruta2.longitud,
-                'latitud': res.data[2].nombrePunto.ruta2.latitud
-              },
-              'ruta3':{
-                'nombreRuta': res.data[2].nombrePunto.ruta3.nombre,
-                'tiempoRuta': res.data[2].nombrePunto.ruta3.tiempo,
-                'longitud': res.data[2].nombrePunto.ruta3.longitud,
-                'latitud': res.data[2].nombrePunto.ruta3.latitud
+            'sectorRobledo':{
+              'numSector': res.data[2].numSector,'nombreConductor': res.data[2].nombreConductor,'nombreSector': res.data[2].nombreRuta,'nombreFlota': res.data[2].nombreFlota,
+              'ruta': {
+                'datosRutaEl_diamante': {
+                  'nombreRuta': res.data[2].nombrePunto.ruta1.nombre,
+                  'tiempoRuta': {tiempo:res.data[2].nombrePunto.ruta1.tiempo},
+                  'longitud': {lon:res.data[2].nombrePunto.ruta1.longitud},
+                  'latitud': {lat:res.data[2].nombrePunto.ruta1.latitud}
+                },
+                'datosRutaLa_campiña': {
+                  'nombreRuta': res.data[2].nombrePunto.ruta2.nombre,
+                  'tiempoRuta': {tiempo:res.data[2].nombrePunto.ruta2.tiempo},
+                  'longitud': {lon:res.data[2].nombrePunto.ruta2.longitud},
+                  'latitud': {lat:res.data[2].nombrePunto.ruta2.latitud}
+                },
+                'datosRutaMiramar': {
+                  'nombreRuta': res.data[2].nombrePunto.ruta3.nombre,
+                  'tiempoRuta': {tiempo:res.data[2].nombrePunto.ruta3.tiempo},
+                  'longitud': {lon:res.data[2].nombrePunto.ruta3.longitud},
+                  'latitud': {lat:res.data[2].nombrePunto.ruta3.latitud}
+                }
               }
             }
           });
@@ -164,11 +173,12 @@ angular.module('app.controllers', [])
 }
 
 }])
-.controller('modulo-mapas', ['$scope', '$stateParams',function ($scope, $stateParams){
+.controller('modulo-mapas', ['$scope', '$stateParams','$http',function ($scope, $stateParams, $http){
   $(document).ready(function(){
     inicioMap();
     googleMap();
     $('.tooltipped').tooltip({delay: 50});
+    $(".buscar-mapas").sideNav();
   })
   function inicioMap(){
       firebase.auth().onAuthStateChanged(function(user){
@@ -195,13 +205,13 @@ angular.module('app.controllers', [])
       console.log("el navegador es geolocalizable");
       navigator.geolocation.getCurrentPosition(function (position) {
         var miPos = position;
+
         var lati = parseFloat(miPos.coords.latitude);
         var long = parseFloat(miPos.coords.longitude);
 
         console.log(miPos.coords.latitude + "\n" + miPos.coords.longitude);
 
         var myLatLng = { lat: lati, lng: long };
-        var destino = { lat:4.6482837, lng: -74.2478954 }
 
         var map = new google.maps.Map(document.getElementById('map'), {
           center: myLatLng,
@@ -230,6 +240,66 @@ angular.module('app.controllers', [])
           var gMarkerDV = new google.maps.Marker(config);
         }
 */
+var recuperar_DB = firebase.database().ref('datosRutas');
+
+
+                recuperar_DB.on('child_added', function (data) {
+                  var dataDB = data.val().nombreSector;
+                  var numSector = data.val().numSector;
+                  $("#select").append('<option value="'+dataDB+'">'+dataDB+'</option>');
+                })
+
+                var contador = 0;
+                $("select[name=nombre-lugar]").change(function(){
+                  $("input[name=result-lugar]").val($(this).val());
+
+                  $('#select-ruta option').remove('option');
+
+                  if($(this).val() == $("select[name=nombre-lugar]").val()){
+                    
+                    var sector = $(this).val();
+                    console.log("sectores med " , sector);
+
+                  var rutasLonLat_DB = firebase.database().ref('datosRutas/sector'+sector+'/ruta');
+                  rutasLonLat_DB.on('child_added', function (data){
+                  var latDB = data.val().latitud;
+                  var lonDB = data.val().longitud;
+                  var nomDB = data.val().nombreRuta;
+                  //console.log("datos de la base \n",nomDB+' '+ latDB +' '+ lonDB );
+                  $("#select-ruta").append('<option value="'+nomDB+'">'+nomDB+'</option>');
+                  });
+
+
+                  $("select[name=nombre-ruta]").change(function(){  
+                    
+
+                    $("input[name=result]").val($(this).val());
+                    if($(this).val() == $("select[name=nombre-ruta]").val()){
+                      var datosR = $(this).val();
+                      var datosSector = $("#datos-sector").val();
+                      //var rutasLonLat_DB = firebase.database().ref('datosRutas/sector'+sector+'/ruta');
+
+                      
+                      datosR = datosR.replace(/\s/g,"_");
+                      console.log(datosR);
+                      var rutas_DB = firebase.database().ref('datosRutas/sector'+datosSector+'/ruta/datosRuta'+datosR);
+                      $.getJSON('../json/rutas.json',function(datos){
+                        console.log(datos[0].nombrePunto.ruta1);
+                      })
+                    }else{
+                      console.log("error");
+                    }
+
+                  });
+
+
+                  }else{
+                    console.log("error");
+                  }
+                  
+                })
+
+        var destino = { lat:6.3423836, lng:-75.5478608 }
         var objConfigDR = {
           map: map 
         }
@@ -244,12 +314,12 @@ angular.module('app.controllers', [])
         var dr = new google.maps.DirectionsRenderer(objConfigDR);
 
         ds.route(objConfigDS, fnRutear);
-        
+
         function fnRutear(resultados, status){
           //mostrar la ruta entre a y b
           if(status == 'OK'){
             dr.setDirections(resultados);
-            console.log(resultados);
+            //console.log(resultados);
           }else{
             console.log("error " + status);
           }

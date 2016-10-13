@@ -2,7 +2,7 @@
     <div class="nav-wrapper">
       <a class="brand-logo margin-left100px"><i class="fa fa-street-view color-blanco" aria-hidden="true"></i><strong><span id="usuario" class=""></span></strong></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a ui-sref="mapa" href="#!">Map</a></li>
+        <li><a ui-sref="mapa" href="#!">Mapa</a></li>
         <li> <a id="cerrar-sesion" class="btn waves-effect waves-light green" href="#!">cerrar sesion</a></li>
       </ul>
     </div>
@@ -19,19 +19,24 @@
     </ul>
   </div>
         <p class="center">Registro de las rutas dentro de la ciudad de medellin</p>
-      <ul class="collection" ng-repeat="ruta in rutasMed">
-        <li class="collection-item avatar">
-             <span class="title"><strong>{{ruta.nombreRuta}}</strong></span>
-             <p><strong>Flota: </strong>{{ruta.nombreFlota}}<br>
-                <strong>Conductor: </strong>{{ruta.nombreConductor}}<br>
-                <strong>Placa vehiculo: </strong>{{ruta.placa}}<br>
-                <strong>Rutas: </strong>
-                <br>{{ruta.nombrePunto.ruta1.nombre}}: {{ruta.nombrePunto.ruta1.tiempo}} <strong>lat/long:</strong> {{ruta.nombrePunto.ruta1.latitud}} / {{ruta.nombrePunto.ruta1.longitud}}
-                <br>{{ruta.nombrePunto.ruta2.nombre}}: {{ruta.nombrePunto.ruta2.tiempo}} <strong>lat/long:</strong> {{ruta.nombrePunto.ruta2.latitud}} / {{ruta.nombrePunto.ruta2.longitud}}
-                <br>{{ruta.nombrePunto.ruta3.nombre}}: {{ruta.nombrePunto.ruta3.tiempo}} <strong>lat/long:</strong> {{ruta.nombrePunto.ruta3.latitud}} / {{ruta.nombrePunto.ruta3.longitud}}
-                <hr>
-                <a ui-sref="mapa" href="#!" class="btn waves-effect waves-light fondo-naranja">Ver detalle <i class="fa fa-street-view" aria-hidden="true"></i></a>
-             </p>
-        </li>
-      </ul>
+        <ul class="collapsible popout" data-collapsible="accordion">
+            <li ng-repeat="ruta in rutasMed">
+                <div class="collapsible-header"><i class="fa fa-street-view" aria-hidden="true"></i>{{ruta.nombreRuta}}</div>
+                <div class="collapsible-body container">
+                    <p><strong>Flota: </strong>{{ruta.nombreFlota}}<br>
+                        <strong>Conductor: </strong>{{ruta.nombreConductor}}<br>
+                        <strong>Placa vehiculo: </strong>{{ruta.placa}}<br>
+                        <strong>Rutas: </strong>
+                        <br>{{ruta.nombrePunto.ruta1.nombre}}: {{ruta.nombrePunto.ruta1.tiempo}} <strong>lat/long:</strong> {{ruta.nombrePunto.ruta1.latitud}}
+                        / {{ruta.nombrePunto.ruta1.longitud}}
+                        <br>{{ruta.nombrePunto.ruta2.nombre}}: {{ruta.nombrePunto.ruta2.tiempo}} <strong>lat/long:</strong> {{ruta.nombrePunto.ruta2.latitud}}
+                        / {{ruta.nombrePunto.ruta2.longitud}}
+                        <br>{{ruta.nombrePunto.ruta3.nombre}}: {{ruta.nombrePunto.ruta3.tiempo}} <strong>lat/long:</strong> {{ruta.nombrePunto.ruta3.latitud}}
+                        / {{ruta.nombrePunto.ruta3.longitud}}
+                        <hr>
+                        <a ui-sref="mapa" href="#!" class="btn waves-effect waves-light fondo-naranja">Buscar en el mapa <i class="fa fa-street-view" aria-hidden="true"></i></a>
+                    </p>
+                </div>
+            </li>
+        </ul>
   </section>

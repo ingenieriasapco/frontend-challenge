@@ -1,35 +1,38 @@
 [{ "nombreRuta":"Bello", 
+   "numSector":1, 
    "nombreFlota":"BELLANITA", 
    "nombreConductor":"Juan", 
    "placa":"JKU - 222",
 
    "nombrePunto":{
-       "ruta1":{"nombre":"Niquia","tiempo":"30 minutos","latitud":"1234567","longitud":"-1234567"},
-       "ruta2":{"nombre":"Parque de bello","tiempo":"30 minutos","latitud":"1234567","longitud":"-1234567"},
-       "ruta3":{"nombre":"Estacion del metro","tiempo":"30 minutos","latitud":"1234567","longitud":"-1234567"}
+       "ruta1":{"nombre":"Niquia","tiempo":"30 minutos","latitud":6.3423836,"longitud":-75.5478608},
+       "ruta2":{"nombre":"Parque de bello","tiempo":"30 minutos","latitud":6.3423833,"longitud":-75.5609931},
+       "ruta3":{"nombre":"Estacion del metro","tiempo":"30 minutos","latitud":6.337804,"longitud":-75.5464877}
    }
 },
 
  { "nombreRuta":"Medellin", 
+   "numSector":2, 
    "nombreFlota":"CIRCULAR COONATRA", 
    "nombreConductor":"Carlos", 
    "placa":"KMI - 456",
 
    "nombrePunto":{
-       "ruta1":{"nombre":"Prado centro","tiempo":"30 minutos","latitud":"1234567","longitud":"-1234567"},
-       "ruta2":{"nombre":"Manrique","tiempo":"30 minutos","latitud":"1234567","longitud":"-1234567"},
-       "ruta3":{"nombre":"Aranjuez","tiempo":"30 minutos","latitud":"1234567","longitud":"-1234567"}
+       "ruta1":{"nombre":"Prado centro","tiempo":"30 minutos","latitud":6.2599903,"longitud":-75.5642174},
+       "ruta2":{"nombre":"Estadio","tiempo":"30 minutos","latitud":6.2604893,"longitud":-75.5971974},
+       "ruta3":{"nombre":"La floresta","tiempo":"30 minutos","latitud":6.2547889,"longitud":-75.6053246}
    }
 },
      
  { "nombreRuta":"Robledo", 
+   "numSector":3, 
    "nombreFlota":"ROBLEDO", 
    "nombreConductor":"Andres", 
    "placa":"LLO - 587",
    
    "nombrePunto":{
-       "ruta1":{"nombre":"El diamante","tiempo":"30 minutos","latitud":"1234567","longitud":"-1234567"},       
-       "ruta2":{"nombre":"La campiña","tiempo":"30 minutos","latitud":"1234567","longitud":"-1234567"}, 
-       "ruta3":{"nombre":"Miramar","tiempo":"30 minutos","latitud":"1234567","longitud":"-1234567"}
+       "ruta1":{"nombre":"El diamante","tiempo":"30 minutos","latitud":6.2858465,"longitud":-75.5892031},       
+       "ruta2":{"nombre":"La campiña","tiempo":"30 minutos","latitud":6.2819918,"longitud":-75.6065871}, 
+       "ruta3":{"nombre":"Miramar","tiempo":"30 minutos","latitud":6.2889495,"longitud":-75.5854292}
    }
 }]
