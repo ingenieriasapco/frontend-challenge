@@ -99,78 +99,9 @@ angular.module('app.controllers', [])
       $http.get('../json/rutas.json')
        .then(function(res){
           $scope.rutasMed = res.data; 
-          var json = $scope.rutasMed = res.data; 
-          //console.log($scope.rutasMed = res.data);             
+          var json = $scope.rutasMed = res.data;         
           datosRutas.ref('datosRutas').update({
-            'sectorBello':{
-              'numSector': res.data[0].numSector,'nombreConductor': res.data[0].nombreConductor,'nombreSector': res.data[0].nombreRuta,'nombreFlota': res.data[0].nombreFlota,
-              'ruta': {
-                'datosRutaNiquia': {
-                  'nombreRuta': res.data[0].nombrePunto.ruta1.nombre,
-                  'tiempoRuta': res.data[0].nombrePunto.ruta1.tiempo,
-                  'longitud': res.data[0].nombrePunto.ruta1.longitud,
-                  'latitud': res.data[0].nombrePunto.ruta1.latitud
-                },
-                'datosRutaParque_de_bello': {
-                  'nombreRuta': res.data[0].nombrePunto.ruta2.nombre,
-                  'tiempoRuta': res.data[0].nombrePunto.ruta2.tiempo,
-                  'longitud': res.data[0].nombrePunto.ruta2.longitud,
-                  'latitud': res.data[0].nombrePunto.ruta2.latitud
-                },
-                'datosRutaEstacion_del_metro': {
-                  'nombreRuta': res.data[0].nombrePunto.ruta3.nombre,
-                  'tiempoRuta': res.data[0].nombrePunto.ruta3.tiempo,
-                  'longitud': res.data[0].nombrePunto.ruta3.longitud,
-                  'latitud': res.data[0].nombrePunto.ruta3.latitud
-                }
-              }
-            },
-            'sectorMedellin':{
-              'numSector': res.data[1].numSector,'nombreConductor': res.data[1].nombreConductor,'nombreSector': res.data[1].nombreRuta,'nombreFlota': res.data[1].nombreFlota,
-              'ruta': {
-                'datosRutaPrado_centro': {
-                  'nombreRuta': res.data[1].nombrePunto.ruta1.nombre,
-                  'tiempoRuta': res.data[1].nombrePunto.ruta1.tiempo,
-                  'longitud': res.data[1].nombrePunto.ruta1.longitud,
-                  'latitud': res.data[1].nombrePunto.ruta1.latitud
-                },
-                'datosRutaEstadio': {
-                  'nombreRuta': res.data[1].nombrePunto.ruta2.nombre,
-                  'tiempoRuta': res.data[1].nombrePunto.ruta2.tiempo,
-                  'longitud': res.data[1].nombrePunto.ruta2.longitud,
-                  'latitud': res.data[1].nombrePunto.ruta2.latitud
-                },
-                'datosRutaLa_floresta': {
-                  'nombreRuta': res.data[1].nombrePunto.ruta3.nombre,
-                  'tiempoRuta': res.data[1].nombrePunto.ruta3.tiempo,
-                  'longitud': res.data[1].nombrePunto.ruta3.longitud,
-                  'latitud': res.data[1].nombrePunto.ruta3.latitud
-                }
-              }
-            },
-            'sectorRobledo':{
-              'numSector': res.data[2].numSector,'nombreConductor': res.data[2].nombreConductor,'nombreSector': res.data[2].nombreRuta,'nombreFlota': res.data[2].nombreFlota,
-              'ruta': {
-                'datosRutaEl_diamante': {
-                  'nombreRuta':res.data[2].nombrePunto.ruta1.nombre,
-                  'tiempoRuta':res.data[2].nombrePunto.ruta1.tiempo,
-                  'longitud':res.data[2].nombrePunto.ruta1.longitud,
-                  'latitud':res.data[2].nombrePunto.ruta1.latitud
-                },
-                'datosRutaLa_campiña': {
-                  'nombreRuta':res.data[2].nombrePunto.ruta2.nombre,
-                  'tiempoRuta':res.data[2].nombrePunto.ruta2.tiempo,
-                  'longitud':res.data[2].nombrePunto.ruta2.longitud,
-                  'latitud':res.data[2].nombrePunto.ruta2.latitud
-                },
-                'datosRutaMiramar': {
-                  'nombreRuta':res.data[2].nombrePunto.ruta3.nombre,
-                  'tiempoRuta':res.data[2].nombrePunto.ruta3.tiempo,
-                  'longitud':res.data[2].nombrePunto.ruta3.longitud,
-                  'latitud':res.data[2].nombrePunto.ruta3.latitud
-                }
-              }
-            }
+            //se crean a qui las referencias nuevas
           });
         });
 }
@@ -180,7 +111,6 @@ angular.module('app.controllers', [])
   $(document).ready(function(){
     inicioMap();
     googleMap();
-    $('.tooltipped').tooltip({delay: 50});
     $(".buscar-mapas").sideNav();
   })
   function inicioMap(){
@@ -221,11 +151,13 @@ angular.module('app.controllers', [])
           scrollwheel: false,
           zoom: 7
         });
+        
         var marker = new google.maps.Marker({
           map: map,
           position: myLatLng,
           title: 'aqui estoy!'
         });
+        
 
         $("#select p input[name=group1]").change(function () {
           $("input[name=result]").val($(this).val());
@@ -255,12 +187,6 @@ angular.module('app.controllers', [])
             $("#datos-lat").val(optionLat);
         })
 
-// $("#bello").change(function(){
-//   var option = $('option:selected', this).attr('data-lon');
-//   console.log(option);
-// })
-
-
         recuperar_bello.on('child_added', function (data){
            var lon = data.val().longitud;
            var lat = data.val().latitud;
@@ -285,10 +211,10 @@ angular.module('app.controllers', [])
            var long = $("#datos-lon").val();
            var latitud = parseFloat(lati);
            var longitud = parseFloat(long);
-
+        marker.setMap(null);
         var destino = { lat:latitud, lng:longitud }
         var objConfigDR = {
-          map: map 
+          map: map
         }
 
         var objConfigDS = {
@@ -303,10 +229,8 @@ angular.module('app.controllers', [])
         ds.route(objConfigDS, fnRutear);
 
         function fnRutear(resultados, status){
-          //mostrar la ruta entre a y b
           if(status == 'OK'){
             dr.setDirections(resultados);
-            //console.log(resultados);
           }else{
             console.log("error " + status);
           }
@@ -320,7 +244,7 @@ angular.module('app.controllers', [])
       console.log("el navegador no es geolocalizable");
     }
 
-  }//function principal
+  }
 
 }])
 
