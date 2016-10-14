@@ -1,0 +1,77 @@
+    <nav class="fondo-naranja">
+        <div class="nav-wrapper">
+            <a class="brand-logo margin-left100px"><i class="fa fa-street-view color-blanco" aria-hidden="true"></i><strong><span id="usuario" class=""></span></strong></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#" data-activates="slide-out" class="buscar-mapas btn waves-effect waves-light">buscar mapa</a></li>
+                <li><a ng-click="vm.cerrarSesion()" class="btn waves-effect waves-light green" href="#!">cerrar sesion</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="userView">
+                <img class="background" src="../img/fondos/mapa-dat.png">
+                <h3><span class="white-text email"><i class="fa fa-street-view color-blanco" aria-hidden="true"></i>Map`s</span></h3>
+            </div>
+        </li>
+
+        <li class="container">
+            <form id="select" id="" action="">
+                <p>
+                    <input class="with-gap" name="group1" type="radio" id="test1" value="Bello" />
+                    <label for="test1">Bello</label>
+                    <select name="nombre-bello" id="bello" class="bello browser-default">
+                      <option value="" disabled selected>elije una opcion</option>
+                    </select>
+                </p>
+                <p>
+                    <input class="with-gap" name="group1" type="radio" id="test2" value="Medellin" />
+                    <label for="test2">Medellin</label>
+                    <select name="nombre-medellin" id="medellin" class="browser-default">
+                      <option value="" disabled selected>elije una opcion</option>
+                    </select>
+                </p>
+                <p>
+                    <input class="with-gap" name="group1" type="radio" id="test3" value="Robledo" />
+                    <label for="test3">Robledo</label>
+                    <select name="nombre-robledo" id="robledo" class="browser-default">
+                      <option value="" disabled selected>elije una opcion</option>
+                    </select>
+                </p>
+            </form>
+            <hr>
+                <div class="dividir"></div>
+                <form>
+                    <input  id="datos-sector" type="text" name="result" value="" disabled="disabled" placeholder="sector">
+                    <input id="datos-ruta" type="text" name="result-ruta" value="" disabled="disabled" placeholder="ruta">
+
+                    <ul style="display: inline-flex;">
+                        <li><input ng-model="vm.latitud" id="datos-lat" type="text" disabled="disabled" placeholder="lat"></li>
+                        <li><input ng-model="vm.longitud" id="datos-lon" type="text" disabled="disabled" placeholder="lon"></li>
+                    </ul>
+                    <!--
+                    <p>{{vm.latitud}} - {{vm.longitud}}</p>
+                    <button ng-click="vm.buscar()" id="enviar-datos" class="btn waves-effect waves-light" type="" name="">buscar</button>
+                    -->
+                     <button ng-click="vm.buscar()" id="enviar-datos" class="btn waves-effect waves-light" type="" name="">buscar</button>
+                </form>
+        </li>
+    </ul>
+    <section class="container relleno-bajo100px">
+        <h2 class="center">RUTAS</h2>
+        <p class="center">Registro de las rutas dentro de la ciudad de medellin</p>
+        <div id="map" style="height: 500px;"></div>
+    </section>
+    <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
+        <a class="btn-floating btn-large blue waves-effect waves-light">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <ul>
+            <li>
+                <a id="cerrar-sesion" class="btn-floating tooltipped red" data-position="top" data-delay="50" data-tooltip="cerrar sesion"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
+            </li>
+            <li>
+                <a ui-sref="route2" class="btn-floating orange tooltipped" data-position="top" data-delay="50" data-tooltip="listado de rutas"><i class="fa fa-server" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </div>
