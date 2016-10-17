@@ -18,8 +18,7 @@
       auth.$onAuth(function(authData){
 		vm.authData = authData;
 		if(authData) {
-			vm.cachedProfile = getCachedProfile();
-			createUser();
+			vm.cachedProfile = vm.getCachedProfile();			
 			//$location.path("/authenticated");
 		}
 		console.log(vm.authData);
@@ -27,41 +26,29 @@
 
     vm.login=function(provider)  {
 
-        auth.$authWithOAuthPopup(provider,  { scope: 'email' })
+        auth.$authWithOAuthPopup(provider,{ scope: 'email' })
 		.catch(function(error){
 			console.error(error);
 		})
 
     }
 
+    vm.getCachedProfile = function() {		
+		
+		return vm.authData.github.cachedUserProfile;
+		
+		}
+
+    vm.getUserImage = function() {
+	
+			return vm.authData.github.cachedUserProfile.avatar_url ? vm.authData.github.cachedUserProfile.avatar_url : "";
+	
+	}    
+
 
     }
-    
-    
-	/*
-
-	var getCachedProfile = function() {
-		if(!$scope.authData) return "";
-
-		switch($scope.authData.provider) {
-			case "github":
-				return $scope.authData.github.cachedUserProfile;
-				break;
-			case "facebook":
-				return $scope.authData.facebook.cachedUserProfile;
-				break;
-			case "google":
-				return $scope.authData.google.cachedUserProfile;
-				break;
-			default:
-				return "";
-		}
-	}  */
-
-
 
     angular.module('routesApp').controller('userAuthentication',userAuthentication);
-
 
 }());
 

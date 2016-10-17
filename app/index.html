@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="/css/font-awesome.css"> 
 </head>
 <body class="main-image" ng-controller="userAuthentication as vm">
+   <div class="user-name" ng-hide="authData">
+       <h5>{{vm.cachedProfile.name}}</h5>
+       <img class="picture-profile" ng-src="{{vm.getUserImage()}}" ng-hide="authData"></img>
+   </div>  
     <h1>RoutesApp</h1>
     <div>
         <a class="button button--social-login button--github" ng-click="vm.login('github')">
         <i class="icon fa fa-github"></i>Login With Github</a>
-   </div>
-    
+   </div> 
 <script src="/lib/angular/angular.js"></script>
 <script src="/lib/angular/angular-resource.js"></script>
 <script src="/lib/angular/angular-route.min.js"></script>

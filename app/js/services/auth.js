@@ -6,7 +6,7 @@
     
     auth.$inject=['$firebaseAuth'];    
 
-    var ref = new Firebase("https://maoapp-befbd.firebaseio.com");    
+    var ref = new Firebase("https://fire-learning.firebaseio.com");    
     
     function auth($firebaseAuth){
 
