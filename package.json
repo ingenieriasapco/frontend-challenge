@@ -1,18 +1,19 @@
 {
-  "name": "demoapp",
+  "name": "routeapp",
   "version": "1.0.0",
-  "description": "This project is a sample application demonstrating a more fully developed realistic single page angular application.",
-  "main": "index.js",
+  "description": "This project is a test for a frontend position.",
+  "main": "app.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Joe Eames & Jim Cooper",
-  "license": "ISC",
+  "author": "Mao",
+  "license": "",
   "dependencies": {
     "body-parser": "1.13.1",
-    "express": "4.13.0"
+    "express": "4.13.0",
+    "firebase": "^3.5.0"
   }
 }

@@ -1,10 +1,10 @@
 'use strict';
 
-angular.module('routesApp', ['ngResource',"ngRoute"])
+angular.module('routesApp', ['ngResource',"ngRoute",'firebase'])
 .config(['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider){
 	$routeProvider
 	.when('/',{
-		controller: "login",
+		controller: "userAuthentication",
 		templateUrl: "/index.html",
 	
 	});
