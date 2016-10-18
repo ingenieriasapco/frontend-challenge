@@ -15,7 +15,8 @@
         vm.provider='';
         vm.authData;
 
-      auth.$onAuth(function(authData){
+       
+        auth.$onAuth(function(authData){
 		vm.authData = authData;
 		if(authData) {
 			vm.cachedProfile = vm.getCachedProfile();			
@@ -41,7 +42,7 @@
 
     vm.getUserImage = function() {
 	
-			return vm.authData.github.cachedUserProfile.avatar_url ? vm.authData.github.cachedUserProfile.avatar_url : "";
+			return vm.authData.github.cachedUserProfile.avatar_url;
 	
 	}    
 

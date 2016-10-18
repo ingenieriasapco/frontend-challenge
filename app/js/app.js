@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('routesApp', ['ngResource',"ngRoute",'firebase'])
+angular.module('routesApp', ['ngResource',"ngRoute",'firebase','ngMap'])
 .config(['$routeProvider', '$locationProvider',function($routeProvider, $locationProvider){
 	$routeProvider
 	.when('/',{

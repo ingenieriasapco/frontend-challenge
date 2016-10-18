@@ -5,15 +5,21 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/font-awesome.css"> 
+
+    <!--
+     <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    -->
+
 </head>
 <body class="main-image" ng-controller="userAuthentication as vm">
-   <div class="user-name" ng-hide="authData">
-       <h5>{{vm.cachedProfile.name}}</h5>
-       <img class="picture-profile" ng-src="{{vm.getUserImage()}}" ng-hide="authData"></img>
+   <div class="user-name" ng-show="vm.authData">
+       <h5>{{vm.authData.github.cachedUserProfile.login}}</h5>
+       <img class="picture-profile" ng-src="{{vm.authData.github.cachedUserProfile.avatar_url}}" ></img>
    </div>  
     <h1>RoutesApp</h1>
     <div>
-        <a class="button button--social-login button--github" ng-click="vm.login('github')">
+        <a class="button button--social-login button--github" ng-click="vm.login('github')" ng-hide="vm.authData">
         <i class="icon fa fa-github"></i>Login With Github</a>
    </div> 
 <script src="/lib/angular/angular.js"></script>
@@ -25,6 +31,19 @@
 <script src="/js/app.js"></script>
 <script src="/js/controllers/userAuthentication.js"></script>
 <script src="/js/services/auth.js"></script>
-<script src="/lib/bootstrap.min.js"></script>
+
+
+<!--Bower Components
+
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="/bower_components/angular-route/angular-route.min.js"></script>
+<script src="/bower_components/firebase/firebase.js"></script>
+<script src="/bower_components/firebase/firebase.js"></script>
+<script src="/bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+
+-->
+
+
 </body>
 </html>
