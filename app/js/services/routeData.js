@@ -6,12 +6,13 @@
     routeData.$inject = ['$http'];
 
     function routeData($http){
+        
         return{
             routes:[{
                 name:"311",
                 companyName:"astransportes",
                 driverName:"alberto garcia",
-                carId:"148olf",
+                id:"1",
                 paths:[{
                     name:"poblado",
                     maxTime:"5 min",
@@ -32,7 +33,7 @@
                 name:"304",
                 companyName:"transportes unidos",
                 driverName:"Santiago Lopez",
-                carId:"359glf",
+                id:"2",
                 paths:[{
                     name:"poblado",
                     maxTime:"5 min",
@@ -53,7 +54,7 @@
                 name:"320",
                 companyName:"transportes antioquia",
                 driverName:"luis garcia",
-                carId:"168olf",
+                id:"3",
                 paths:[{
                     name:"poblado",
                     maxTime:"5 min",

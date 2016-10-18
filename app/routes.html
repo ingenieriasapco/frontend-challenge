@@ -7,26 +7,24 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/lib/jquery-ui-1.11.4.custom/jquery-ui.css">    
 </head>
-<body>
+<body class="body-image">
 <div ng-controller="routes as vm">
     <h1>Routes</h1>
-    <div ng-repeat="route in vm.routes">
+    <div ng-repeat="route in vm.routes" class="routes-container">
         <div class="row">
             <div class="spann11">
                 <h2 class="route-name">{{route.name}}</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="span4">
-                <div><strong>Company Name:</strong>{{route.companyName | uppercase }}</div>
-                <div><strong>Driver Name:</strong>{{route.driverName}}</div>
-            </div>
-            <div class="span4">
-                <div><strong>CarId:</strong>{{route.carId}}</div>
-            </div>
+        <div class="row">          
+            <div class="span6">                
+                <h4><strong>Company Name:</strong>  {{route.companyName | uppercase }}</h4>
+                <h4><strong>Driver Name:</strong>  {{route.driverName}}</h4>
+                <h4><strong>CarId:</strong>  {{route.id}}</h4>
+            </div>           
         </div>
-        <ul class="thumbnails">
-            <h3>Paths</h3>
+        <ul class="thumbnails">            
+                <h3 class="paths">Paths</h3>             
                 <li ng-repeat="path in route.paths">
                     <div class="row session">
                         <div class="well">

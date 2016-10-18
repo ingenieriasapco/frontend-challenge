@@ -141,3 +141,26 @@ map{
     display:block;
     height:300px;
 }
+
+.routes-container{
+    background-color: rgba(22, 77, 81, 0.7);
+    border-radius:20px;
+    padding:0px 40px;
+    margin:10px;
+    cursor:pointer;
+    display: inline-block;
+    transition:all .4s;
+    }
+
+    .routes-container:hover{
+        background:rgba(22, 77, 81, 0.9);
+    }
+
+.body-image{
+    background-image:url("https://static.pexels.com/photos/21014/pexels-photo.jpg");
+    background-size: cover;
+}
+
+.paths{
+    margin-left:20px;
+}

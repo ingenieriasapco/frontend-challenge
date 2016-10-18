@@ -9,7 +9,6 @@
 <body>
 <h1>Route Detail</h1>
 <h3>Name Route</h3>  
-
 <div ng-controller="routeDetails as vm">
      <map zoom="10" center="[6.165, -75.60]">         
     <marker ng-repeat="s in vm.selection" position="{{s.pos}}" title="{{s.name}}"></marker>
