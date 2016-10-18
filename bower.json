@@ -1,0 +1,30 @@
+{
+  "name": "routeapp",
+  "description": "This project is a test for a frontend position.",
+  "main": "app.js",
+  "authors": [
+    "Mao"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/maoapp/frontend-challenge",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "font-awesome": "fontawesome#^4.6.3",
+    "bootstrap": "~3.1.1",
+    "gulp": "^3.9.1",
+    "ngmap": "^1.17.6",
+    "firebase": "^3.5.0",
+    "angular": "1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-ui-router": "ui-router#^0.3.1"
+  }
+}

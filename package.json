@@ -1,0 +1,19 @@
+{
+  "name": "routeapp",
+  "version": "1.0.0",
+  "description": "This project is a test for a frontend position.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mao",
+  "license": "",
+  "dependencies": {
+    "body-parser": "1.13.1",
+    "express": "4.13.0",
+    "firebase": "^3.5.0"
+  }
+}

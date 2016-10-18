@@ -1,0 +1,179 @@
+/* app css stylesheet */
+body{
+    padding:0px 50px;
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.hoverwell:hover {
+  background-color: #52575c;
+  cursor: pointer;
+}
+select, textarea {
+  color: #52575c;
+}
+
+.well-title {
+  margin-top: 0px;
+}
+.session {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.votingWidget {
+  height: 64px;
+  padding: 7px;
+}
+
+.votingButton {
+  padding-left:6px;
+  cursor:pointer;
+}
+
+.sessionThumbnail {
+    height:100%;
+    overflow: hidden;
+}
+
+
+.calendar{
+    border: 1px solid #555;
+    width: 238px;
+}
+.calendar .row {
+    margin-left: 0px;
+}
+.calendar .row div{
+    float:left;
+    padding:2px;
+    width:30px;
+    text-align:center;
+}
+.calendar-nav-left {
+    float:left;
+    width: 20px;
+    padding:2px;
+}
+.calendar-nav-right {
+    float:left;
+    width: 20px;
+    padding:2px;
+    text-align:right;
+}
+
+.calendar .row .calendar-hdr {
+    padding:2px;
+    float:left;
+    width: 166px;
+    text-align:center;
+}
+.pointer {
+    cursor: pointer;
+}
+
+
+.well{
+    margin-left:20px;
+    background-color:RGBA(100,100,100,0.5);
+}
+
+h1{
+    margin-top: 80px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.route-name{
+    border-bottom:1px solid white;
+}
+
+.main-image{
+  background-image:url("https://static.pexels.com/photos/21014/pexels-photo.jpg");
+ background-size: cover;
+}
+
+.main-image h1{
+  text-align:center;
+  color:white;
+  margin-top:80px;
+  background-color:RGBA(100,100,100,0.5);
+  padding:20px;
+}
+
+.main-image div{
+  text-align:center;
+   margin-top:40px;
+}
+
+.button{
+  text-decoration:none;
+  color:white;
+  font-size:20px;
+  background-color:#333;
+  padding:20px;
+  border-radius:4px;
+  transition:all .3s;
+  cursor:pointer;
+}
+
+.button:hover{
+
+    background:black;
+    text-decoration: none;                
+}
+
+.fa{
+    margin-right:10px;
+}
+
+.picture-profile{
+    border-radius:50%;
+    width:5%;
+}
+
+map{
+    display:block;
+    height:300px;
+}
+
+.routes-container{
+    background-color: rgba(22, 77, 81, 0.7);
+    border-radius:20px;
+    padding:0px 40px;
+    margin:10px;
+    cursor:pointer;
+    display: inline-block;
+    transition:all .4s;   
+    }
+
+.main-title{
+
+    margin-bottom:70px;
+
+}
+
+    .routes-container:hover{
+        background:rgba(22, 77, 81, 0.9);
+    }
+
+.body-image{
+    background-image:url("https://static.pexels.com/photos/21014/pexels-photo.jpg");
+    background-size: cover;
+}
+
+.paths{
+    margin-left:20px;
+}
+
+.route-detail{
+
+    text-align: center;
+    margin-bottom: 40px;
+
+}
