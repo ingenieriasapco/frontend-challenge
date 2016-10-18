@@ -10,12 +10,12 @@
     vm.routes=routeData.routes;
     vm.selection=[];
     vm.positions=[];
-
+    var makers=[];
 
     angular.forEach(vm.routes[0].paths, function(path) {
 
              vm.positions.push({name:path.name,pos:[path.lat,path.lng]});
-
+             vm.makers.push({lat:path.lat,lng:path.lng});
                           
              });              
         

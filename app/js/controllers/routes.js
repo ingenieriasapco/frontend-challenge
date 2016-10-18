@@ -1,8 +1,8 @@
 (function(){
     'use strict';
 
-    routes.$inject = ['routeData'];
-    function routes(routeData){
+    routes.$inject = ['routeData','auth'];
+    function routes(routeData,auth){
         var vm=this;
         vm.routes=routeData.routes;
     }

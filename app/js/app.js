@@ -11,12 +11,13 @@ angular.module('routesApp', ['ngResource',"ngRoute",'firebase','ngMap'])
     $routeProvider.when('/routes.html',
             {
                 templateUrl: 'routes.html',
-                controller: 'routes'                
+                controller: 'route'
+
             });
-    $routeProvider.when('/routes.html/:routeId',
+    $routeProvider.when('/routeDeatils.html/:routeId',
             {
                 templateUrl: 'routeDetails.html',
-                controller: 'routeDetails',
+                controller: 'routeDetails'
             }).        
 	otherwise({
 		redirectTo: '/'});

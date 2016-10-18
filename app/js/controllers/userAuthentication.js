@@ -6,6 +6,7 @@
     [
         'auth',
         '$location'
+
        
     ];
     
@@ -19,18 +20,20 @@
         auth.$onAuth(function(authData){
 		vm.authData = authData;
 		if(authData) {
-			vm.cachedProfile = vm.getCachedProfile();			
-			//$location.path("/authenticated");
+			vm.cachedProfile = vm.getCachedProfile();            		
+			//$location.path("/route");
 		}
 		console.log(vm.authData);
 	});
 
     vm.login=function(provider)  {
 
+
         auth.$authWithOAuthPopup(provider,{ scope: 'email' })
 		.catch(function(error){
 			console.error(error);
 		})
+        
 
     }
 
