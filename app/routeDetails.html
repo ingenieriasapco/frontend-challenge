@@ -6,9 +6,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">         
 </head>
-<body>
+<body class="body-image">
 <h1>Route Detail</h1>
-<h3>Name Route</h3>  
+<h3 class="route-detail">Name Route</h3>  
 <div ng-controller="routeDetails as vm">
      <map zoom="10" center="[6.165, -75.60]">         
     <marker ng-repeat="s in vm.selection" position="{{s.pos}}" title="{{s.name}}"></marker>

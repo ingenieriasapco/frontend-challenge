@@ -149,8 +149,14 @@ map{
     margin:10px;
     cursor:pointer;
     display: inline-block;
-    transition:all .4s;
+    transition:all .4s;   
     }
+
+.main-title{
+
+    margin-bottom:70px;
+
+}
 
     .routes-container:hover{
         background:rgba(22, 77, 81, 0.9);
@@ -163,4 +169,11 @@ map{
 
 .paths{
     margin-left:20px;
+}
+
+.route-detail{
+
+    text-align: center;
+    margin-bottom: 40px;
+
 }

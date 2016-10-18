@@ -6,6 +6,13 @@
         var vm=this;
         vm.routes=routeData.routes;
     }
+
+    /* for  Get data from $http service
+    
+    routeData.getRoute=function(route){
+            vm.routes=route;
+        }
+*/
     
     angular.module('routesApp').controller('routes',routes);
 
