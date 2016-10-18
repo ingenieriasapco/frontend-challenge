@@ -10,9 +10,9 @@
     vm.selection=[];
     
     vm.positions =[ 
-        { title: 'Marker 1', pos:[40.71, -74.21] }, 
-        { title: 'Marker 2', pos:[40.72, -74.20] }, 
-        { title: 'Marker 3', pos:[40.73, -74.19] }
+        { title: 'Path 1', pos:[40.71, -74.21] }, 
+        { title: 'Path 2', pos:[40.72, -74.20] }, 
+        { title: 'Path 3', pos:[40.73, -74.19] }
     ];
         
     function toggleSelection(position) {
