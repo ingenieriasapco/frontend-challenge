@@ -136,3 +136,8 @@ h1{
     border-radius:50%;
     width:5%;
 }
+
+map{
+    display:block;
+    height:300px;
+}

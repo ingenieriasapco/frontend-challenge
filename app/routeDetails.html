@@ -8,19 +8,36 @@
 </head>
 <body>
 <h1>Route Detail</h1>
-<h3>Name Route</h3>    
+<h3>Name Route</h3>  
+
 <div ng-controller="routeDetails as vm">
-     <map zoom="12" center="[40.71, -74.21]" style="display:block;height:300px">
-    <marker ng-repeat="s in vm.selection" position="{{s.pos}}" title="{{s.title}}"></marker>
+     <map zoom="10" center="[6.165, -75.60]">         
+    <marker ng-repeat="s in vm.selection" position="{{s.pos}}" title="{{s.name}}"></marker>
+    <shape name="polyline" path="{{vm.draw}}" geodesic="true" stroke-color="#FF0000" stroke-opacity="1.0" stroke-weight="2">
+            </shape>
   </map>
   <br>
   <span ng-repeat="p in vm.positions">
     <input  
-     id="{{p.title}}" type="checkbox" value="{{p.title}}" 
+     id="{{p.name}}" type="checkbox" value="{{p.name}}" ng-init="checked=true"
      ng-checked="vm.selection.indexOf(p) > -1" 
-     ng-click="vm.toggleSelection(p)" />{{ p.title }}
+     ng-click="vm.toggleSelection(p)" />{{ p.name }}
     </span>
 </div>
+
+
+<!--
+
+<div id="map_canvas" ng-app="appMaps" ng-controller="routeDetails as vm">
+        <map center="[6.165, -75.60]" zoom="10">
+            <marker ng-repeat="pos in vm.markers" position="{{pos.lat}}, {{pos.lng}}"></marker>
+            <shape name="polyline" path="{{vm.path}}" geodesic="true" stroke-color="#FF0000" stroke-opacity="1.0" stroke-weight="2">
+            </shape>
+        </map>
+</div>
+
+-->
+
 <script src="/lib/jquery.min.js"></script>
 <script src="/lib/angular/angular.js"></script>
 <script src="/lib/angular/angular-resource.js"></script>
