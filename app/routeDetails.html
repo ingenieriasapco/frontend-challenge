@@ -27,7 +27,9 @@
 
 <!--
 
-<div id="map_canvas" ng-app="appMaps" ng-controller="routeDetails as vm">
+   canvas for drawing points of places
+
+<div id="map_canvas" ng-controller="routeDetails as vm">
         <map center="[6.165, -75.60]" zoom="10">
             <marker ng-repeat="pos in vm.markers" position="{{pos.lat}}, {{pos.lng}}"></marker>
             <shape name="polyline" path="{{vm.path}}" geodesic="true" stroke-color="#FF0000" stroke-opacity="1.0" stroke-weight="2">

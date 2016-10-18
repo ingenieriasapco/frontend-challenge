@@ -33,6 +33,7 @@
     }
 
     /*
+    function for drawing points of places
 
      vm.markers = [{ id: 1, lat: 37.772323, lng: -122.214897 }, { id: 2, lat: 21.291982, lng: -157.821856 }, { id: 3, lat: -27.46758, lng: 153.027892 }];
     vm.path = vm.markers.map(function(marker){
