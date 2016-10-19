@@ -215,7 +215,7 @@ var config = {
 						console.log(vm.latitud, vm.longitud);
 						}
 						
-						var destino = { lat:6.3423836, lng:-75.5478608}
+						var destino = { lat:latitud, lng:longitud}
 						var objConfigDR = {
 							map: map
 						}
