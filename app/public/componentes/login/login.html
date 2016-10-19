@@ -1,0 +1,29 @@
+<section class="login">
+    <div class="formulario-login container ancho-50 relleno-alto50px">
+    <p class="center relleno-bajo20px">
+       <i class="fa fa-street-view fuente150px color-blanco nombre" aria-hidden="true"></i>
+       <span class="fuente150px color-blanco nombre">Map's</span>
+    </p>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+          <i class="fa fa-sign-in prefix color-blanco" aria-hidden="true"></i>
+          <input id="usuario" type="text" class="validate color-blanco" ng-model="vm.email">
+          <label for="" class="color-blanco">Usuario</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+          <i class="fa fa-unlock prefix color-blanco" aria-hidden="true"></i>
+          <input id="pass" type="password" class="validate color-blanco" ng-model="vm.pass">
+          <label for="" class="color-blanco">Contraseña</label>
+          </div>
+        </div>   
+        <button ng-click="vm.loginUser()" class="btn waves-effect waves-light blue">Entrar <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+        <button ng-click="vm.loginConGit()" class="btn waves-effect waves-light tooltipped red">Entrar <i class="fa fa-github" aria-hidden="true"></i>
+         </button>
+       </form>
+    </div>
+    </div>
+</section>

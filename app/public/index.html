@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <link rel="stylesheet" href="public/lib/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link href="public/estilos.css" rel="stylesheet">
+
+    <script type="text/javascript" src="public/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/firebasejs/3.4.1/firebase.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkdUZd1USx_zIq-bzNxeNNSyB2rnPqrts" async defer></script>
+    <script type="text/javascript" src="public/lib/angular.js"></script>
+    <script type="text/javascript" src="public/lib/angular-ui-router.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="componentes/app.controllers.js"></script>
+    <script type="text/javascript" src="app.constant.js"></script>
+
+    <script type="text/javascript" src="componentes/login/routes.login.js"></script>
+    <script type="text/javascript" src="componentes/rutas/routes.rutas.js"></script>
+    <script type="text/javascript" src="componentes/mapas/routes.mapas.js"></script>
+    <!-- -->  
+  </head>
+  <body ng-app="app">
+    <div ui-view></div>
+  </body>
+</html>

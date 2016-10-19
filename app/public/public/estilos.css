@@ -1,0 +1,50 @@
+html{}
+body{}
+
+.color-negro{color: black !important;}
+.color-blanco{color: white !important;}
+
+.ancho-50{width: 50% !important;}.ancho-60{width: 60% !important;}
+.ancho-70{width: 70% !important;}.ancho-80{width: 80% !important;}
+.ancho-90{width: 90% !important;}.ancho-100{width: 100% !important;}
+
+.fuente17px{font-size: 17px !important;}
+.fuente30px{font-size: 30px !important;}
+.fuente150px{font-size: 150px !important;}
+
+.relleno-alto100px{padding-top: 100px;}
+.relleno-bajo100px{padding-bottom: 100px;}
+.relleno-alto50px{padding-top: 50px;}
+.relleno-bajo50px{padding-bottom: 50px;}
+.relleno-bajo20px{padding-bottom: 20px;}
+.relleno-alto10px{padding-top: 10px !important;}
+
+.margin-left100px{margin-left: 100px;}
+
+.fondo-naranja{background-color: orange !important;}
+.username{
+    height: 49px;
+    line-height: 2;
+    background-color: #f2f2f2 !important;
+    padding: 9px !important;
+}
+
+.login{
+    background-image: url(../img/fondos/mapa-dat.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+@media only screen and (max-width: 993px){
+    .formulario-login{
+        width: 90% !important;
+    }
+    .nombre{
+        font-size: 40px !important;
+    }
+    .brand-logo{
+        margin-left: inherit !important;
+    }
+}
