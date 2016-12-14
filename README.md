@@ -31,3 +31,7 @@ Aquí están las directrices para este ejercicio:
 * Generar carpeta de distribucion para llevar a producción, incluirla en el repositorio.
 * Por favor, no incluyen la carpeta en node_modules ni bower_components en su repositorio.
 * Aunque menos necesario sugerimos emplear Angular Material.
+
+## Importante:
+
+* Subir tu carpeta de distribución a producción puede ser heroku, gh-pages, esto quiere decir que tu código debe estar minificado, la mínima cantidad de request a archivos .css y .js. 
