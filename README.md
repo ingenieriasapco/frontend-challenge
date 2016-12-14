@@ -24,6 +24,7 @@ La aplicación debe permitir al usuario ver el detalle de la ruta, lo cual oblig
 Aquí están las directrices para este ejercicio:
 
 * Seguir la guía de estilos de [John Papa](https://github.com/johnpapa/angular-styleguide/tree/master/a1)
+* Automatizar tareas y hacer module bundler atraves de [Gulp](http://gulpjs.com/) o [Webpack](https://webpack.github.io/)
 * Debes hacer un [fork de este repositorio](https://github.com/ingenieriasapco/frontend-challenge) a tu cuenta de [GitHub](https://github.com/).
 * Crear un branch en tu repositorio con tu nombre
 * Solo se acepta el codigo del challenge como un Pull Request a nuestro repositorio desde tu branch nuevo al branch develop.
